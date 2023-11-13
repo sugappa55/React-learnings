@@ -1,0 +1,98 @@
+/* .pulse {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  background-color: var(--secondary-main);
+  animation: pulse 0.75s alternate infinite;
+  border: 15px solid transparent;
+}
+
+
+@keyframes pulse {
+  0% {
+    border: 0px solid var(--secondary-1);
+  }
+  100% {
+    border: 15px solid var(--secondary-1);
+  }
+} */
+
+#root {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.box {
+  border: 1px solid gray;
+  width: 30vw;
+  height: 80vh;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  overflow: auto;
+  padding: 10px;
+}
+
+.box::-webkit-scrollbar {
+  display: none;
+}
+
+.buttons > button {
+  all: unset;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: var(--secondary-main);
+  color: #fff;
+  border-radius: 5px;
+  transition: all 0.3s ease-in;
+  border: 1px solid transparent;
+}
+.buttons > button:not(:first-child) {
+  margin-top: 10px;
+}
+.buttons {
+  margin: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.card {
+  padding: 10px 20px;
+  display: flex;
+  gap: 10px;
+  background-color: var(--secondary-1);
+  border-radius: 10px;
+  animation: dropIn 0.3s 1 forwards;
+}
+
+button:disabled {
+  pointer-events: none;
+  cursor: none;
+}
+
+button:active {
+  background: #fff;
+  color: var(--secondary-main);
+  border: 1px solid currentColor;
+}
+
+input[type="checkbox"] {
+  cursor: pointer;
+  padding: 2px;
+}
+
+@keyframes dropIn {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
+
+label {
+  cursor: pointer;
+}
